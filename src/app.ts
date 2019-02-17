@@ -1,4 +1,3 @@
-import packageInfo from '../package.json'
 import loader from './loader'
 
 // change cwd to ./app
@@ -19,5 +18,5 @@ if (param === PATH) {
   loader(argv[3])
 } else if (param === VERSION) {
   // tslint:disable-next-line
-  console.log(packageInfo.version)
+  console.log('0.0.1')
 }

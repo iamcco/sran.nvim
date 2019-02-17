@@ -17,6 +17,9 @@
     "importHelpers": true,
     "allowSyntheticDefaultImports": true
   },
+  "include": [
+    "./src"
+  ],
   "exclude": [
     "./lib"
   ]
