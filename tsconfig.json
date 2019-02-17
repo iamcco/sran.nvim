@@ -17,10 +17,6 @@
     "importHelpers": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": [
-    "./src",
-    "./package.json"
-  ],
   "exclude": [
     "./lib"
   ]
