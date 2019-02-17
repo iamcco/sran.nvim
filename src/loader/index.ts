@@ -16,8 +16,8 @@ function isFile(scriptPath: string): boolean {
 }
 
 function readFile(scriptPath: string): string {
-  if (isFile(path.join(scriptPath, 'js'))) {
-    return path.join(scriptPath, 'js')
+  if (isFile(`${scriptPath}.js`)) {
+    return `${scriptPath}.js`
   }
   if (isFile(path.join(scriptPath, 'index.js'))) {
     return path.join(scriptPath, 'index.js')
@@ -26,6 +26,9 @@ function readFile(scriptPath: string): string {
 }
 
 function readPackage(scriptPath: string): string {
+  if (isFile(scriptPath)) {
+    return scriptPath
+  }
   const packageJson = path.join(scriptPath, 'package.json')
   if (isFile(packageJson)) {
     const jsonStr = fs.readFileSync(packageJson, 'utf-8')

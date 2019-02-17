@@ -7,7 +7,8 @@ let s:is_win = has("win32") || has("win64")
 let s:clientIds = []
 let s:logfile = tempname()
 let s:channel = v:null
-let s:script = resolve(expand('<sfile>:h:h:h:h').'/lib/vim-node-rpc/lib/index.js')
+let s:root_dir = expand('<sfile>:h:h:h:h')
+let s:script = s:root_dir . '/lib/vim-node-rpc/lib/index.js'
 
 " env used only for testing purpose
 if !empty($SRAN_NVIM_LISTEN_ADDRESS)

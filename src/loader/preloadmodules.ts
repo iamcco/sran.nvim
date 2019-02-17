@@ -1,7 +1,7 @@
 import log4js from 'log4js'
 import msgpackLite from 'msgpack-lite'
-import neovim from 'neovim'
-import tslib from 'tslib'
+import * as neovim from 'neovim'
+import * as tslib from 'tslib'
 
 export default {
   neovim,
