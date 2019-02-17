@@ -2,7 +2,7 @@
   "name": "sran.nvim",
   "version": "0.0.1",
   "description": "Simple Request And Notification script for (neo)vim",
-  "bin": "./lib/index.js",
+  "bin": "./lib/app.js",
   "repository": "https://github.com/iamcco/sran.vim.git",
   "author": "年糕小豆汤 <ooiss@qq.com>",
   "license": "MIT",

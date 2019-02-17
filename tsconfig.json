@@ -18,7 +18,8 @@
     "allowSyntheticDefaultImports": true
   },
   "include": [
-    "./src"
+    "./src",
+    "./package.json"
   ],
   "exclude": [
     "./lib"
