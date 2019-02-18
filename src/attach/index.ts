@@ -1,31 +1,11 @@
 import { attach, NeovimClient } from 'neovim'
 import { Attach } from 'neovim/lib/attach/attach'
 import sran from '../sran'
-import getIP from '../util/getIP'
-import getLogger from '../util/logger'
-import opener from '../util/opener'
+import Plugin from './plugin'
 
-const util = {
-  getIP,
-  opener,
-  getLogger
-}
-
-export interface IPlugin {
-  util: {
-    getIP: typeof getIP
-    opener: typeof opener
-    getLogger: typeof getLogger
-  }
-  nvim: NeovimClient
-}
-
-export default function(options: Attach): IPlugin {
+export default function(options: Attach): Plugin {
   const nvim: NeovimClient = attach(options)
-  const plugin = {
-    nvim,
-    util
-  }
+  const plugin = new Plugin(nvim)
 
   sran(plugin)
 

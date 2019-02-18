@@ -1,11 +1,11 @@
 import fg from 'fast-glob'
 import path from 'path'
-import { IPlugin } from '../attach'
+import Plugin from '../attach/plugin'
 import getLogger from '../util/logger'
 
 const logger = getLogger('SRAN:sran')
 
-export default async function init(plugin: IPlugin) {
+export default async function init(plugin: Plugin) {
   const { nvim } = plugin
   const runtimepath = await nvim.getOption('runtimepath')
   logger.info('runtimepath: ', runtimepath)

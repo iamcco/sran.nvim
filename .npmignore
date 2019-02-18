@@ -1,0 +1,13 @@
+src
+test
+autoload
+plugin
+bin
+tsconfig.json
+tslint.json
+install.cmd
+install.sh
+release.sh
+lib/vim-node-rpc
+*.log
+*.map

@@ -1,4 +1,5 @@
-import attach, { IPlugin } from './attach'
+import attach from './attach'
+import Plugin from './attach/plugin'
 import Logger from './util/logger'
 
 const logger = Logger('SRAN:index')
@@ -10,7 +11,7 @@ const address =
 
 const MSG_PREFIX = '[sran.vim]'
 
-const plugin: IPlugin = attach({
+const plugin: Plugin = attach({
   socket: address
 })
 
