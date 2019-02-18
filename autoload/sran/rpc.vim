@@ -143,3 +143,9 @@ function! sran#rpc#notify(...) abort
   endif
   call function(l:fn, l:args)()
 endfunction
+
+function! sran#rpc#server_ready() abort
+  if exists('#User#SranNvimRpcReady')
+    doautocmd User SranNvimRpcReady
+  endif
+endfunction

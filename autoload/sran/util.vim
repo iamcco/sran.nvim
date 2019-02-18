@@ -106,4 +106,3 @@ function! sran#util#pre_build_version() abort
   endif
   return ''
 endfunction
-

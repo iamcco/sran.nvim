@@ -34,6 +34,7 @@ export default async function init(plugin: Plugin) {
   nvim.channelId
     .then(async channelId => {
       await nvim.setVar('sran_node_channel_id', channelId)
+      nvim.call('sran#rpc#server_ready')
     })
     .catch(e => {
       logger.error('Get channelId error: ', e)
