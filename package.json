@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "description": "Simple Request And Notification script for (neo)vim",
   "bin": "./lib/app.js",
-  "repository": "https://github.com/iamcco/sran.vim.git",
+  "repository": "https://github.com/iamcco/sran.nvim.git",
   "author": "年糕小豆汤 <ooiss@qq.com>",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "scripts": {
     "watch": "tsc -w -p ./",
     "build": "tsc -p ./ && pkg --targets node10-linux-x64,node10-macos-x64,node10-win-x64 --out-path ./bin ."
