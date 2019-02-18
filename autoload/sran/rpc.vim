@@ -117,3 +117,27 @@ function! sran#rpc#get_server_status() abort
   endif
   return 1
 endfunction
+
+function! sran#rpc#request(...) abort
+  if sran#rpc#get_server_status() !=# 1
+    call sran#util#echo_messages('Error', '[sran.nvim]: service is not running')
+  endif
+  let l:fn = 'rpcrequest'
+  let l:args = [g:sran_node_channel_id] + a:000
+  if s:is_vim
+    let l:fn = 'sran#nvim#rpc#request'
+  endif
+  call function(l:fn, l:args)()
+endfunction
+
+function! sran#rpc#notify(...) abort
+  if sran#rpc#get_server_status() !=# 1
+    call sran#util#echo_messages('Error', '[sran.nvim]: service is not running')
+  endif
+  let l:fn = 'rpcnotify'
+  let l:args = [g:sran_node_channel_id] + a:000
+  if s:is_vim
+    let l:fn = 'sran#nvim#rpc#notify'
+  endif
+  call function(l:fn, l:args)()
+endfunction
