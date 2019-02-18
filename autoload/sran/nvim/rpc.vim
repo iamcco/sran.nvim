@@ -101,7 +101,7 @@ function! sran#nvim#rpc#request(clientId, method, ...) abort
   if !sran#nvim#rpc#check_client(a:clientId)
     return
   endif
-  let args = get(a:, 1, [])
+  let args = a:000
   let res = ch_evalexpr(s:channel, [a:clientId, a:method, args], {'timeout': 5000})
   if type(res) == 1 && res ==# '' | return '' | endif
   let [l:errmsg, res] =  res
@@ -114,7 +114,7 @@ endfunction
 
 function! sran#nvim#rpc#notify(clientId, method, ...) abort
   if empty(s:channel) | return | endif
-  let args = get(a:000, 0, [])
+  let args = a:000
   " use 0 as vim request id
   let data = json_encode([0, [a:clientId, a:method, args]])
   call ch_sendraw(s:channel, data."\n")
