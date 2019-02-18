@@ -2,6 +2,7 @@ import fastGlob from 'fast-glob'
 import log4js from 'log4js'
 import msgpackLite from 'msgpack-lite'
 import * as neovim from 'neovim'
+import requestPromise from 'request-promise'
 import * as tslib from 'tslib'
 import Plugin from '../attach/plugin'
 
@@ -11,5 +12,6 @@ export default {
   tslib,
   'msgpack-lite': msgpackLite,
   'fast-glob': fastGlob,
-  'sran.nvim': Plugin
+  'sran.nvim': Plugin,
+  'request-promise': requestPromise
 }
