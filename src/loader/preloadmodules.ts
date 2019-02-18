@@ -1,3 +1,4 @@
+import fastGlob from 'fast-glob'
 import log4js from 'log4js'
 import msgpackLite from 'msgpack-lite'
 import * as neovim from 'neovim'
@@ -7,5 +8,6 @@ export default {
   neovim,
   log4js,
   tslib,
-  'msgpack-lite': msgpackLite
+  'msgpack-lite': msgpackLite,
+  'fast-glob': fastGlob
 }

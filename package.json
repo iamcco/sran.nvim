@@ -12,6 +12,7 @@
     "build": "tsc -p ./ && pkg --targets node10-linux-x64,node10-macos-x64,node10-win-x64 --out-path ./bin ."
   },
   "dependencies": {
+    "fast-glob": "^2.2.6",
     "log4js": "^3.0.6",
     "msgpack-lite": "^0.1.26",
     "neovim": "^4.2.1",

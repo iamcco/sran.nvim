@@ -11,6 +11,8 @@ const logger = Logger('SRAN:loader')
 
 const { builtinModules = [] }: { builtinModules: string[] } = Module
 
+const cacheModules = {}
+
 function isFile(scriptPath: string): boolean {
   return fs.existsSync(scriptPath) && fs.statSync(scriptPath).isFile()
 }
@@ -47,6 +49,10 @@ function readPackage(scriptPath: string): string {
 export default function loader(modulePath: string) {
   logger.info(`module path: ${modulePath}`)
   const scriptPath = readPackage(modulePath)
+  if (cacheModules[scriptPath]) {
+    logger.info(`use cache: ${modulePath}`)
+    return cacheModules[scriptPath].exports
+  }
   if (scriptPath === '') {
     throw new Error(`Module not found: ${modulePath}`)
   }
@@ -69,7 +75,9 @@ export default function loader(modulePath: string) {
         return userModule.require(name)
       }
       try {
-        const subModulePath = path.join(path.dirname(scriptPath), name)
+        const subModulePath = path.isAbsolute(name)
+          ? name
+          : path.join(path.dirname(scriptPath), name)
         return loader(subModulePath)
       } catch (e) {
         // name is pre loadmodule
@@ -83,6 +91,9 @@ export default function loader(modulePath: string) {
     __filename: userModule.filename,
     __dirname: path.dirname(scriptPath)
   })
+
+  // cache module
+  cacheModules[scriptPath] = userModule
 
   vm.runInContext(codeStr, sanbox, { filename: userModule.filename })
 
