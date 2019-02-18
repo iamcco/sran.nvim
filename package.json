@@ -1,6 +1,6 @@
 {
   "name": "sran.nvim",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple Request And Notification script for (neo)vim",
   "bin": "./lib/app.js",
   "main": "./lib/attach/plugin.js",
