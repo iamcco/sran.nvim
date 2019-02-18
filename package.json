@@ -17,8 +17,7 @@
     "log4js": "^3.0.6",
     "msgpack-lite": "^0.1.26",
     "neovim": "^4.2.1",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.4",
+    "node-fetch": "^2.3.0",
     "tslib": "^1.9.3"
   },
   "devDependencies": {
