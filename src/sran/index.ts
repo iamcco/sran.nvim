@@ -17,7 +17,8 @@ export default async function init(plugin: Plugin) {
 
   packages.forEach(packagePath => {
     try {
-      const m = require(packagePath)
+      let m = require(packagePath)
+      m = m.default || m
       if (typeof m === 'function') {
         m(plugin)
       } else {
