@@ -10,5 +10,6 @@ declare const _default: {
     'msgpack-lite': any;
     'fast-glob': fastGlob.IApi;
     'sran.nvim': typeof Plugin;
+    'request-promise': any;
 };
 export default _default;
