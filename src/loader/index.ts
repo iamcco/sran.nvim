@@ -74,6 +74,21 @@ export default function loader(modulePath: string) {
       if (builtinModules.indexOf(name) !== -1) {
         return userModule.require(name)
       }
+      // load module from node_modules
+      if (
+        !(
+          path.isAbsolute(name) ||
+          name.startsWith('./') ||
+          name.startsWith('../')
+        )
+      ) {
+        try {
+          const m = userModule.require(name)
+          return m
+        } catch (e) {
+          logger.info(`Module ${name}: not exists in node_modules`, e)
+        }
+      }
       try {
         const subModulePath = path.isAbsolute(name)
           ? name

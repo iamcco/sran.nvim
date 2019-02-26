@@ -1,6 +1,6 @@
 {
   "name": "sran.nvim",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Simple Request And Notification script for (neo)vim",
   "bin": "./lib/app.js",
   "main": "./lib/attach/plugin.js",
@@ -10,7 +10,7 @@
   "private": false,
   "scripts": {
     "watch": "tsc -w -p ./",
-    "build": "tsc -p ./ && pkg --targets node10-linux-x64,node10-macos-x64,node10-win-x64 --out-path ./bin ."
+    "build": "tsc -p ./ && pkg --targets node8-linux-x64,node8-macos-x64,node8-win-x64 --out-path ./bin ."
   },
   "dependencies": {
     "fast-glob": "^2.2.6",
