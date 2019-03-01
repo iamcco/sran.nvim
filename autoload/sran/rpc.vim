@@ -128,7 +128,7 @@ function! sran#rpc#request(...) abort
   if s:is_vim
     let l:fn = 'sran#nvim#rpc#request'
   endif
-  call function(l:fn, l:args)()
+  return function(l:fn, l:args)()
 endfunction
 
 function! sran#rpc#notify(...) abort
