@@ -88,6 +88,7 @@ then you will see `hello world` message in the command line after 2 seconds.
 ### Examples
 
 - [dict.nvim](https://github.com/iamcco/dict.nvim) translate words through google translate api
+- [git-p.nvim](https://github.com/iamcco/git-p.nvim) git diff sign and blame line display
 
 ### Debug
 
