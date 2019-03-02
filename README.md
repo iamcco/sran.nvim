@@ -71,6 +71,9 @@ then you will see `hello world` message in the command line after 2 seconds.
   - neovim
   - node-fetch
   - tslib
+  - cheerio
+  - rxjs
+  - findup
   > so if you use these packages you don't need to install them in your plugin's local directory
 - javascript [Plugin](https://github.com/iamcco/sran.nvim/blob/8ea143449dd09f1b35b18976ed7c07efa8ca3f42/src/attach/plugin.ts#L6) api
   - [nvim](https://github.com/neovim/node-client) vim instance
@@ -94,5 +97,7 @@ let $NVIM_SRAN_LOG_LEVEL = 'debug'
 ```
 
 ### Buy Me A Coffee ☕️
+
+![btc](https://img.shields.io/keybase/btc/iamcco.svg?style=popout-square)
 
 ![image](https://user-images.githubusercontent.com/5492542/42771079-962216b0-8958-11e8-81c0-520363ce1059.png)
