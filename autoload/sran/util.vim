@@ -78,7 +78,7 @@ function! s:sran_prebuild_install(status, ...) abort
     call sran#util#echo_messages('Error', '[sran]: install fail')
     return
   endif
-  echo '[sran.nvim]: install cpmpleted'
+  echo '[sran.nvim]: install completed'
 endfunction
 
 function! s:trim(str) abort
