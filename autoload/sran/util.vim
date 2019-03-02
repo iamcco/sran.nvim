@@ -81,10 +81,14 @@ function! s:sran_prebuild_install(status, ...) abort
   echo '[sran.nvim]: install cpmpleted'
 endfunction
 
+function! s:trim(str) abort
+  return substitute(a:str, '\v^(\s|\\n)*|(\s|\\n)*$', '', 'g')
+endfunction
+
 function! sran#util#install(...)
   let l:version = sran#util#pre_build_version()
   let l:info = json_decode(join(readfile(s:sran_root_dir . '/package.json'), ''))
-  if trim(l:version) ==# trim(l:info.version)
+  if s:trim(l:version) ==# s:trim(l:info.version)
     return
   endif
   let obj = json_decode(join(readfile(s:package_file)))
