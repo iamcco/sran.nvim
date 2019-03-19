@@ -5,8 +5,8 @@ import Logger from './util/logger'
 const logger = Logger('SRAN:index')
 
 const address =
-  process.env.NVIM_LISTEN_ADDRESS ||
   process.env.SRAN_NVIM_LISTEN_ADDRESS ||
+  process.env.NVIM_LISTEN_ADDRESS ||
   '/tmp/nvim'
 
 const MSG_PREFIX = '[sran.vim]'
