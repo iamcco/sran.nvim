@@ -2,13 +2,15 @@
 
 > The easiest way to write remote plugin for (neo)vim by javascript
 
-Using neovim's [node-client](https://github.com/neovim/node-client) you can write remote plugin really easy through javascript.
-But most of time i just want to run an async function to fetch some data or other stuff, and sran.nvim is for the situation
-and also support vim by [vim-node-rpc](https://github.com/neoclide/vim-node-rpc).
+Using neovim's [node-client](https://github.com/neovim/node-client) you can
+write remote plugin really easy through javascript.  But most of time i just
+want to run an async function to fetch some data or other stuff, and sran.nvim
+is for the situation and also support vim by
+[vim-node-rpc](https://github.com/neoclide/vim-node-rpc).
 
 ### Install
 
-> It only works on vim >= 8.1 and neovim
+> It works on vim >= 8.1 and neovim
 
 ```viml
 " use pre build
@@ -22,7 +24,7 @@ Plug 'iamcco/sran.nvim', { 'do': 'yarn' }
 
 plugin structure
 
-```
+``` text
 your-plugin-dir
   -> rplugin
      -> sran
@@ -89,10 +91,11 @@ then you will see `hello world` message in the command line after 2 seconds.
 
 - [dict.nvim](https://github.com/iamcco/dict.nvim) translate words through google translate api
 - [git-p.nvim](https://github.com/iamcco/git-p.nvim) git diff sign and blame line display
+- [clock.nvim](https://github.com/iamcco/clock.nvim) big clock for neovim
 
 ### Debug
 
-```viml
+``` vim
 let $NVIM_SRAN_LOG_FILE = expand('~/sran-nvim.log')
 let $NVIM_SRAN_LOG_LEVEL = 'debug'
 ```
