@@ -1,6 +1,11 @@
-# Simple Request And Notification
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/5492542/55129701-0e908b00-5153-11e9-96e7-2bd86d9c591d.png" />
+  <p align="center">
+      Simple Request And Notification
+  </p>
+</p>
 
-> The easiest way to write remote plugin for (neo)vim by javascript
+> *The easiest way to write remote plugin for (neo)vim by javascript*
 
 Using neovim's [node-client](https://github.com/neovim/node-client) you can
 write remote plugin really easy through javascript.  But most of time i just
