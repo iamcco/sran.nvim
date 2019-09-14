@@ -1,6 +1,6 @@
 {
   "name": "sran.nvim",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Simple Request And Notification script for (neo)vim",
   "bin": "./lib/app.js",
   "main": "./lib/attach/plugin.js",
@@ -14,12 +14,12 @@
     "build": "tsc -p ./ && pkg --targets node8-linux-x64,node8-macos-x64,node8-win-x64 --out-path ./bin ."
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "fast-glob": "^2.2.6",
+    "cheerio": "^1.0.0-rc.3",
+    "fast-glob": "^3.0.4",
     "findup": "^0.1.5",
     "log4js": "^3.0.6",
     "msgpack-lite": "^0.1.26",
-    "neovim": "^4.2.1",
+    "neovim": "^4.5.0",
     "node-fetch": "^2.3.0",
     "rxjs": "^6.4.0",
     "tslib": "^1.9.3"

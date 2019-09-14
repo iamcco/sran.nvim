@@ -14,7 +14,7 @@ declare const _default: {
     cheerio: any;
     'rxjs/operators': typeof rxjsOperators;
     'msgpack-lite': any;
-    'fast-glob': fastGlob.IApi;
+    'fast-glob': typeof fastGlob;
     'sran.nvim': typeof Plugin;
     'node-fetch': any;
 };

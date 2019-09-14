@@ -18,5 +18,5 @@ if (param === PATH) {
   loader(argv[3])
 } else if (param === VERSION) {
   // tslint:disable-next-line
-  console.log('0.0.5')
+  console.log('0.0.6')
 }
